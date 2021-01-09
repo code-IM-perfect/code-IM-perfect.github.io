@@ -1,0 +1,522 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* General Stuff */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--paletteDark);
+  font-family: Montserrat;
+  overflow-x: hidden;
+  color: var(--paletteLight);
+}
+
+:root {
+  --paletteDark: #0b0b0a;
+  --paletteLight: #fff;
+  --brandColor: #4da167;
+}
+
+/* SVG styling */
+.cls-1 {
+  fill: var(--paletteDark);
+}
+.cls-2 {
+  fill: var(--brandColor);
+}
+.crcl {
+  fill: var(--paletteLight);
+}
+.clsy-1 {
+  fill: var(--paletteDark);
+}
+.clsy-2 {
+  fill: var(--paletteLight);
+}
+.clst-2 {
+  fill: var(--paletteDark);
+}
+
+/* Header */
+nav ul {
+  display: none;
+}
+header {
+  background-color: var(--paletteLight);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  height: 11vh;
+  padding: 2vh 0;
+}
+
+.video {
+  color: var(--brandColor);
+}
+
+/* Tap Here */
+
+#tapHere {
+  position: absolute;
+  width: 30vw;
+  right: 2vw;
+  top: 1vh;
+}
+
+/* Main */
+main {
+  margin: auto;
+  width: 85vw;
+  display: grid;
+  justify-items: center;
+}
+
+h1 {
+  margin-top: 13vh;
+  text-align: center;
+  color: var(--paletteLight);
+  margin-bottom: 9vh;
+  font-size: 12vmin;
+  font-weight: 800;
+}
+
+p {
+  text-align: center;
+  color: var(--paletteLight);
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.heroBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  font-family: Montserrat;
+  font-weight: 500;
+  padding: 5vmin 7vmin;
+  color: var(--paletteDark);
+  font-size: 8vmin;
+  margin: 9vh 0 13vh 0;
+  background: var(--paletteLight);
+  border: none;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* Videos */
+.popu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  margin-bottom: 10vh;
+  grid-gap: 2em 1.5em;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.saareVid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  margin-bottom: 10vh;
+  grid-gap: 2em 1.5em;
+}
+
+/* FOOTER STYLES */
+
+footer {
+  position: relative;
+  height: 53vh;
+  background-color: var(--brandColor);
+}
+
+footer p {
+  color: var(--paletteDark);
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 1vh;
+  left: 50%;
+  transform: translate(-51%, 0);
+  width: 100%;
+  font-weight: 200;
+}
+
+#twitter {
+  width: 24vmin;
+}
+
+.logo {
+  display: none;
+}
+
+#youtube {
+  width: 23vmin;
+}
+
+.social {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  column-gap: 15vw;
+  align-items: center;
+}
+
+h3 {
+  font-size: 14vmin;
+  font-weight: 800;
+  text-align: center;
+  color: var(--paletteDark);
+  padding-top: 5vh;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-align: center;
+  color: var(--paletteDark);
+  margin-top: 1vh;
+}
+
+/* 
+_____            _____           ______
+|    \  |    |  /     \  |\   | |
+|____/  |____| |       | | \  | |___
+|       |    | |       | |  \ | |
+|       |    |  \_____/  |   \| |______
+
+*/
+
+@media screen and (max-width: 767px) {
+  .cursor {
+    display: none;
+  }
+
+  .sir {
+    height: 100vh;
+  }
+
+  nav .showUl {
+    display: block;
+    margin-top: 3vh;
+    list-style: none;
+    text-align: center;
+    font-size: 3em;
+    height: 50vh;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: var(--paletteDark);
+  }
+
+  nav ul li {
+    margin-bottom: 10vh;
+  }
+
+  .wrapHead {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  .button {
+    align-self: center;
+  }
+
+  #youtubeLap {
+    display: none;
+  }
+}
+
+/* _______          ____
+      |      /\    |    \
+      |     /__\   |_____|
+      |    /    \  |      \
+      |   /      \ |______/
+*/
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  .cursor {
+    display: none;
+  }
+
+  .sir {
+    height: 100vh;
+  }
+
+  nav .showUl {
+    display: block;
+    margin-top: 5vh;
+    list-style: none;
+    text-align: center;
+    height: 50vh;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: var(--paletteDark);
+    font-size: 3em;
+  }
+
+  nav ul li {
+    margin-bottom: 15vh;
+  }
+
+  .wrapHead {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  .button {
+    align-self: center;
+    width: 30vw;
+  }
+
+  h1 {
+    font-size: 12vmin;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+
+  .popu {
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  }
+
+  .saareVid {
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  }
+
+  /* Footer */
+  .contact h4 {
+    font-size: 5vmin;
+  }
+
+  footer {
+    height: 70vh;
+  }
+
+  #youtube {
+    width: 17vmin;
+  }
+  #twitter {
+    width: 18vmin;
+  }
+
+  footer p {
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+
+  #youtubeLap {
+    display: none;
+  }
+}
+
+/*   ______     _______
+    |      \   /
+    |______/  |
+    |         |
+    |          \_______
+*/
+@media screen and (min-width: 1026px) {
+  /* Cursor */
+  .cursor {
+    display: block;
+    position: absolute;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    border: 0.25em solid var(--paletteLight);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 5;
+    transition: all 0.2s ease;
+    transition-property: background, transform, transform-origin, border;
+    transform-origin: 130% 130%;
+  }
+
+  .removeCurz {
+    cursor: none;
+  }
+
+  .curzOnHeader {
+    fill: var(--paletteLight);
+    mix-blend-mode: difference;
+  }
+
+  .curzOnLink {
+    transform: scale(1.5);
+    background: var(--paletteLight);
+  }
+
+  .curzOnFoot {
+    transform-origin: 64% 58%;
+    transform: scale(6);
+    background: var(--brandColor);
+    border: var(--brandColor);
+  }
+
+  .curzOnButton {
+    transform: scale(2);
+    background: var(--paletteLight);
+    mix-blend-mode: difference;
+    transform-origin: 100% 100%;
+  }
+
+  /* Header */
+  #tapHere {
+    display: none;
+  }
+
+  .wrapHead {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    display: inline-flex;
+  }
+
+  nav {
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    margin: 0 0 0 auto;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 3vmin;
+    padding: 5vh 5vh;
+  }
+
+  ul li {
+    list-style: none;
+  }
+  nav ul {
+    display: flex;
+  }
+
+  .video:hover {
+    color: black;
+  }
+
+  /* Main */
+  .heroBox {
+    align-self: flex-start;
+    width: 50%;
+    align-items: flex-start;
+  }
+
+  .popu {
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  }
+
+  .saareVid {
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 30vh;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    background: var(--paletteDark);
+    grid-area: "contact logo social" "copyright copyright copyright";
+  }
+
+  footer p {
+    grid-area: "copyright";
+    text-align: center;
+    font-size: 1.5em;
+    z-index: 10;
+  }
+
+  #clogo {
+    width: 15vw;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    grid-area: "logo";
+  }
+
+  #youtubeLap {
+    width: 7em;
+    z-index: 10;
+  }
+
+  #youtube {
+    display: none;
+  }
+
+  #twitter {
+    width: 7.5em;
+    z-index: 11;
+  }
+
+  .social {
+    margin-top: -0.5em;
+    column-gap: 4em;
+    z-index: 10;
+  }
+
+  .conw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: "contact";
+  }
+
+  footer h3 {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+    z-index: 10;
+  }
+
+  .contact h4 {
+    font-size: 2em;
+    z-index: 10;
+  }
+
+  .contact {
+    z-index: 10;
+  }
+
+  .foso h3 {
+    margin-bottom: 0;
+  }
+
+  .wrso {
+    display: grid;
+    place-content: center;
+    grid-area: "social";
+  }
+}
