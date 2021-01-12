@@ -19,7 +19,17 @@ body {
   color: var(--paletteDark);
 }
 
-footer::selection {
+footer h3::selection {
+  background-color: var(--paletteDark);
+  color: var(--brandColor);
+}
+
+footer h4::selection {
+  background-color: var(--paletteDark);
+  color: var(--brandColor);
+}
+
+footer p::selection {
   background-color: var(--paletteDark);
   color: var(--brandColor);
 }
