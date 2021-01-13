@@ -15,7 +15,7 @@ body {
 }
 
 ::selection {
-  background-color: var(--brandColor);
+  background-color: #5cc97e;
   color: var(--paletteDark);
 }
 
