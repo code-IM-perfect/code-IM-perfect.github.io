@@ -59,6 +59,24 @@ footer p::selection {
 .clst-2 {
   fill: var(--paletteDark);
 }
+.clsi-1 {
+  fill: #0c0c0c;
+}
+.clsi-2 {
+  fill: #191919;
+}
+.clsi-3 {
+  fill: #111;
+}
+.clsi-4 {
+  fill: #161614;
+}
+.clsi-5 {
+  fill: #888;
+}
+.clsi-6 {
+  fill: #c8c8c8;
+}
 
 /* Header */
 nav ul {
@@ -268,13 +286,19 @@ _____            _____           ______
   #youtubeLap {
     display: none;
   }
+
+  .video_icon {
+    display: none;
+  }
 }
 
-/* _______          ____
-      |      /\    |    \
-      |     /__\   |_____|
-      |    /    \  |      \
-      |   /      \ |______/
+/*
+_______          ____
+   |      /\    |    \
+   |     /__\   |_____|
+   |    /    \  |      \
+   |   /      \ |______/
+   
 */
 @media screen and (min-width: 768px) and (max-width: 1025px) {
   .cursor {
@@ -307,6 +331,11 @@ _____            _____           ______
     display: flex;
     align-content: center;
     flex-direction: column;
+  }
+  /* Main */
+
+  .video_icon {
+    display: none;
   }
 
   .button {
@@ -356,11 +385,13 @@ _____            _____           ______
   }
 }
 
-/*   ______     _______
-    |      \   /
-    |______/  |
-    |         |
-    |          \_______
+/*
+ ______     _______
+|      \   /
+|______/  |
+|         |
+|          \_______
+
 */
 @media screen and (min-width: 1026px) {
   /* Cursor */
@@ -445,14 +476,43 @@ _____            _____           ______
   }
 
   /* Main */
+  .heroWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .heroBox {
     align-self: flex-start;
-    width: 50%;
     height: 100vh;
   }
 
   h1 {
     width: 100%;
+  }
+
+  .heroIcon {
+    display: grid;
+    place-items: center;
+  }
+
+  .video_icon {
+    width: 20vw;
+    transform: translate(30%, -20%);
+  }
+
+  #play {
+    transform: translateX(-1%);
+    animation: cool infinite 5s ease;
+  }
+
+  @keyframes cool {
+    40% {
+      opacity: 0.0001;
+    }
+    50% {
+      transform: translate(-30%, 5%);
+      opacity: 0;
+    }
   }
 
   .popu {
