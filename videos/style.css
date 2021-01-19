@@ -405,8 +405,8 @@ _______          ____
     position: absolute;
     width: 4vw;
     height: 4vw;
-    border-radius: 50%;
     border: 0.218vw solid var(--paletteLight);
+    border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 5;

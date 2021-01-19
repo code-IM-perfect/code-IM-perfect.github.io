@@ -388,10 +388,10 @@ footer {
   /* Cursor */
   .cursor {
     position: absolute;
-    width: 3em;
-    height: 3em;
+    width: 4vw;
+    height: 4vw;
+    border: 0.218vw solid var(--paletteLight);
     border-radius: 50%;
-    border: 0.25em solid var(--paletteLight);
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 5;
