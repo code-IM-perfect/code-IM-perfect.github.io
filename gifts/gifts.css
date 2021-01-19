@@ -499,20 +499,25 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
   }
 
+  /* Footer */
   footer {
     margin-top: 30vh;
     height: 100vh;
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 5vh;
     background: var(--paletteDark);
-    grid-area: "contact logo social" "copyright copyright copyright";
+    grid-template-areas:
+      "contact logo social"
+      "copyright copyright copyright";
   }
 
   footer p {
-    grid-area: "copyright";
+    grid-area: copyright;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 3vh;
     z-index: 10;
+    line-height: 2vh;
   }
 
   #clogo {
@@ -524,11 +529,11 @@ footer {
     align-items: center;
     justify-content: center;
     z-index: 10;
-    grid-area: "logo";
+    grid-area: logo;
   }
 
   #youtubeLap {
-    width: 7em;
+    width: 15vh;
     z-index: 10;
   }
 
@@ -537,7 +542,7 @@ footer {
   }
 
   #twitter {
-    width: 7.5em;
+    width: 15vh;
     z-index: 11;
   }
 
@@ -551,17 +556,17 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-area: "contact";
+    grid-area: contact;
   }
 
   footer h3 {
-    font-size: 5em;
+    font-size: 12vh;
     margin-bottom: 0.5em;
     z-index: 10;
   }
 
   .contact h4 {
-    font-size: 2em;
+    font-size: 5vh;
     z-index: 10;
   }
 
@@ -576,6 +581,6 @@ footer {
   .wrso {
     display: grid;
     place-content: center;
-    grid-area: "social";
+    grid-area: social;
   }
 }
