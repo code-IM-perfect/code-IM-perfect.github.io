@@ -57,3 +57,6 @@ navLinks.forEach((link) => {
     getBody.classList.remove("removeCurz");
   });
 })();
+
+//Rellax
+var rellax = new Rellax(".parallax");

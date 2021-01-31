@@ -7,6 +7,12 @@
   margin: 0;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--paletteDark);
   font-family: Montserrat;
@@ -52,7 +58,7 @@ header {
 }
 
 .button {
-  height: 11vh;
+  height: 15vh;
   padding: 2vh 0;
 }
 
@@ -74,95 +80,12 @@ header {
   position: relative;
 }
 
-.wrap-parallax {
-  position: relative;
-  height: 100vh;
-}
-
-.parallax {
-  width: 1050px;
-  position: absolute;
-  transform: translateX(-30%);
-}
-
-.sky {
-  top: 0;
-  z-index: 1;
-  width: 2000px;
-}
-
-.one {
-  top: 365px;
-  z-index: 12;
-}
-
-.two {
-  top: 300px;
-  z-index: 11;
-}
-
-.three {
-  top: 325px;
-  z-index: 10;
-}
-
-.four {
-  top: 299px;
-  z-index: 9;
-}
-
-.five {
-  top: 247px;
-  z-index: 8;
-}
-
-.six {
-  top: 310px;
-  z-index: 7;
-}
-
-.seven {
-  top: 281px;
-  z-index: 6;
-}
-
-.eight {
-  top: 271px;
-  z-index: 5;
-}
-
-.nine {
-  top: 270px;
-  z-index: 4;
-}
-
-.ten {
-  top: 260px;
-  z-index: 3;
-}
-
-.eleven {
-  top: 250px;
-  z-index: 2;
-}
-
 /* FOOTER STYLES */
 
 footer {
   position: relative;
   height: 53vh;
   background-color: var(--brandColor);
-}
-
-footer p {
-  color: var(--paletteDark);
-  font-size: 0.9em;
-  position: absolute;
-  bottom: 1vh;
-  left: 50%;
-  transform: translate(-51%, 0);
-  width: 100%;
-  font-weight: 200;
 }
 
 #twitter {
@@ -199,6 +122,14 @@ h4 {
   text-align: center;
   color: var(--paletteDark);
   margin-top: 1vh;
+}
+
+footer p {
+  color: var(--paletteDark);
+  position: absolute;
+  bottom: 1vh;
+  text-align: center;
+  width: 100%;
 }
 
 /* 
@@ -250,6 +181,24 @@ h4 {
   #youtubeLap {
     display: none;
   }
+
+  /* Parallax for Mobile */
+  .parallax {
+    display: none;
+  }
+
+  /* Footer */
+  footer p {
+    color: var(--paletteDark);
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translate(-51%, 0);
+    width: 100%;
+    font-weight: 200;
+    text-align: center;
+  }
 }
 
 /*
@@ -258,8 +207,8 @@ _______          ____
    |     /__\   |_____|
    |    /    \  |      \
    |   /      \ |______/
- 
- */
+
+*/
 @media screen and (min-width: 768px) and (max-width: 1025px) {
   .cursor {
     display: none;
@@ -310,11 +259,21 @@ _______          ____
   }
 
   footer p {
+    color: var(--paletteDark);
     font-size: 1.2em;
     font-weight: 300;
+    position: absolute;
+    bottom: 1vh;
+    left: 50vw;
+    transform: translateX(-50%);
   }
 
   #youtubeLap {
+    display: none;
+  }
+
+  /* Parallax for tab */
+  .parallax {
     display: none;
   }
 }
@@ -349,13 +308,14 @@ _______          ____
   }
 
   .curzOnHeader {
-    fill: var(--paletteLight);
+    fill: #269e97;
     mix-blend-mode: difference;
+    border-color: #269e97;
   }
 
   .curzOnLink {
     transform: scale(1.5);
-    background: var(--paletteLight);
+    background: #269e97;
   }
 
   .curzOnFoot {
@@ -400,6 +360,111 @@ _______          ____
 
   .home:hover {
     color: black;
+  }
+
+  /* Parallax */
+  .refer {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    opacity: 30%;
+    display: none;
+  }
+
+  .wrap-parallax {
+    position: relative;
+    height: 100vh;
+  }
+
+  .parallax {
+    background-size: auto 450px;
+    position: absolute;
+    background-repeat: repeat-x;
+    display: block;
+    width: 100vw;
+    height: 1000px;
+    background-position: top;
+  }
+
+  .sky {
+    background-image: url(res/img/sky.png);
+    top: -90px;
+    z-index: -11;
+    height: 500px;
+    background-size: auto 400px;
+  }
+
+  .eleven {
+    background-image: url(res/img/11.png);
+    z-index: -10;
+    top: 260px;
+  }
+
+  .ten {
+    background-image: url(res/img/10.png);
+    z-index: -9;
+    top: 295px;
+  }
+
+  .nine {
+    background-image: url(res/img/9.png);
+    z-index: -8;
+    top: 320px;
+  }
+
+  .eight {
+    background-image: url(res/img/8.png);
+    z-index: -7;
+    top: 320px;
+  }
+
+  .seven {
+    background-image: url(res/img/7.png);
+    z-index: -6;
+    top: 330px;
+  }
+
+  .six {
+    background-image: url(res/img/6.png);
+    background-size: auto 250px;
+    z-index: -5;
+    top: 420px;
+  }
+
+  .five {
+    background-image: url(res/img/5.png);
+    z-index: -4;
+    background-size: auto 400px;
+    top: 280px;
+  }
+
+  .four {
+    background-image: url(res/img/4.png);
+    z-index: -3;
+    background-size: auto 400px;
+    top: 390px;
+  }
+
+  .three {
+    background-image: url(res/img/3.png);
+    z-index: -2;
+    top: 100px;
+    background-size: auto 700px;
+  }
+
+  .two {
+    background-image: url(res/img/2.png);
+    z-index: -1;
+    top: 420px;
+    background-size: auto 500px;
+  }
+
+  .one {
+    background-image: url(res/img/1.png);
+    z-index: 0;
+    top: 520px;
+    background-size: auto 630px;
   }
 
   /* Main */
