@@ -132,6 +132,80 @@ footer p {
   width: 100%;
 }
 
+/* Parallax */
+.wrap-parallax {
+  position: relative;
+  height: 100vh;
+}
+
+.parallax {
+  position: absolute;
+  background-repeat: repeat-x;
+  width: 100vw;
+  height: 1000px;
+  background-position: top;
+}
+
+.sky {
+  background-image: url(res/img/sky.png);
+  z-index: -11;
+}
+
+.eleven {
+  background-image: url(res/img/11.png);
+  z-index: -10;
+}
+
+.ten {
+  background-image: url(res/img/10.png);
+  z-index: -9;
+}
+
+.nine {
+  background-image: url(res/img/9.png);
+  z-index: -8;
+}
+
+.eight {
+  background-image: url(res/img/8.png);
+  z-index: -7;
+}
+
+.seven {
+  background-image: url(res/img/7.png);
+  z-index: -6;
+}
+
+.six {
+  background-image: url(res/img/6.png);
+  z-index: -5;
+}
+
+.five {
+  background-image: url(res/img/5.png);
+  z-index: -4;
+}
+
+.four {
+  background-image: url(res/img/4.png);
+  z-index: -3;
+}
+
+.three {
+  background-image: url(res/img/3.png);
+  z-index: -2;
+}
+
+.two {
+  background-image: url(res/img/2.png);
+  z-index: -1;
+}
+
+.one {
+  background-image: url(res/img/1.png);
+  z-index: 0;
+}
+
 /* 
   _____            _____           ______
   |    \  |    |  /     \  |\   | |
@@ -184,7 +258,58 @@ footer p {
 
   /* Parallax for Mobile */
   .parallax {
-    display: none;
+    background-size: auto 300px;
+  }
+
+  .sky {
+    top: -100px;
+  }
+
+  .eleven {
+    top: 140px;
+  }
+
+  .ten {
+    top: 170px;
+  }
+
+  .nine {
+    top: 200px;
+  }
+
+  .eight {
+    top: 210px;
+  }
+
+  .seven {
+    top: 230px;
+  }
+
+  .six {
+    top: 290px;
+  }
+
+  .five {
+    top: 220px;
+    background-size: auto 250px;
+  }
+
+  .four {
+    top: 250px;
+  }
+
+  .three {
+    top: 130px;
+    background-size: auto 450px;
+  }
+
+  .two {
+    top: 390px;
+  }
+
+  .one {
+    top: 490px;
+    background-size: auto 900px;
   }
 
   /* Footer */
@@ -363,15 +488,6 @@ _______          ____
   }
 
   /* Parallax */
-  .refer {
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    height: 100vh;
-    opacity: 30%;
-    display: none;
-  }
-
   .wrap-parallax {
     position: relative;
     height: 100vh;
@@ -398,7 +514,7 @@ _______          ____
   .eleven {
     background-image: url(res/img/11.png);
     z-index: -10;
-    top: 260px;
+    top: 250px;
   }
 
   .ten {
@@ -450,21 +566,21 @@ _______          ____
     background-image: url(res/img/3.png);
     z-index: -2;
     top: 100px;
-    background-size: auto 700px;
+    background-size: auto 760px;
   }
 
   .two {
     background-image: url(res/img/2.png);
     z-index: -1;
-    top: 420px;
+    top: 430px;
     background-size: auto 500px;
   }
 
   .one {
     background-image: url(res/img/1.png);
     z-index: 0;
-    top: 520px;
-    background-size: auto 630px;
+    top: 500px;
+    background-size: auto 720px;
   }
 
   /* Main */
