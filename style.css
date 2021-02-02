@@ -9,6 +9,26 @@
   margin: 0;
 }
 
+::selection {
+  background-color: #5cc97e;
+  color: var(--paletteDark);
+}
+
+footer h3::selection {
+  background-color: var(--paletteDark);
+  color: var(--brandColor);
+}
+
+footer h4::selection {
+  background-color: var(--paletteDark);
+  color: var(--brandColor);
+}
+
+footer p::selection {
+  background-color: var(--paletteDark);
+  color: var(--brandColor);
+}
+
 body {
   background-color: var(--paletteDark);
   font-family: Montserrat;
@@ -126,6 +146,7 @@ footer p {
   bottom: 1vh;
   text-align: center;
   width: 100%;
+  font-weight: 200;
 }
 
 /* Parallax */
@@ -134,7 +155,7 @@ footer p {
   height: 100vh;
 }
 
-.parallax {
+img.parallax {
   position: absolute;
   background-repeat: repeat-x;
   width: 100vw;
@@ -170,6 +191,17 @@ footer p {
 .seven {
   background-image: url(res/img/7.png);
   z-index: -6;
+}
+
+h6 {
+  color: var(--paletteDark);
+  position: relative;
+  top: 240px;
+  text-align: center;
+  z-index: -7;
+  text-transform: uppercase;
+  font-size: 7vmin;
+  letter-spacing: 0.5vmin;
 }
 
 .six {
@@ -500,83 +532,59 @@ _______          ____
   }
 
   .sky {
-    background-image: url(res/img/sky.png);
     top: -90px;
-    z-index: -11;
     height: 500px;
     background-size: auto 400px;
   }
 
   .eleven {
-    background-image: url(res/img/11.png);
-    z-index: -10;
     top: 250px;
   }
 
   .ten {
-    background-image: url(res/img/10.png);
-    z-index: -9;
     top: 295px;
   }
 
   .nine {
-    background-image: url(res/img/9.png);
-    z-index: -8;
     top: 320px;
   }
 
   .eight {
-    background-image: url(res/img/8.png);
-    z-index: -7;
     top: 320px;
   }
 
   .seven {
-    background-image: url(res/img/7.png);
-    z-index: -6;
     top: 330px;
   }
 
   .six {
-    background-image: url(res/img/6.png);
     background-size: auto 250px;
-    z-index: -5;
     top: 420px;
   }
 
   .five {
-    background-image: url(res/img/5.png);
-    z-index: -4;
     background-size: auto 400px;
     top: 280px;
   }
 
   .four {
-    background-image: url(res/img/4.png);
-    z-index: -3;
     background-size: auto 400px;
     top: 390px;
   }
 
   .three {
-    background-image: url(res/img/3.png);
-    z-index: -2;
     top: 100px;
     background-size: auto 760px;
   }
 
   .two {
-    background-image: url(res/img/2.png);
-    z-index: -1;
     top: 430px;
     background-size: auto 500px;
   }
 
   .one {
-    background-image: url(res/img/1.png);
-    z-index: 0;
     top: 500px;
-    background-size: auto 720px;
+    background-size: auto 2000px;
   }
 
   /* Main */
@@ -664,5 +672,87 @@ _______          ____
     display: grid;
     place-content: center;
     grid-area: social;
+  }
+}
+
+/* 
+                   ____     ______      ______
+|         /\      |    \   /           |
+|        /  \     |____/  |      ___   |___
+|       /----\    |   \   |       | |  |
+|_____ /      \   |    \   \_____/  |  |______
+
+*/
+@media screen and (min-width: 1960px) {
+  /* Parallax */
+  .wrap-parallax {
+    position: relative;
+    height: 100vh;
+  }
+
+  .parallax {
+    background-size: auto 700px;
+    position: absolute;
+    background-repeat: repeat-x;
+    display: block;
+    width: 100vw;
+    background-position: top;
+  }
+
+  .sky {
+    top: -130px;
+    height: 800px;
+    background-size: auto 600px;
+  }
+
+  .eleven {
+    top: 300px;
+  }
+
+  .ten {
+    top: 350px;
+  }
+
+  .nine {
+    top: 390px;
+  }
+
+  .eight {
+    top: 390px;
+  }
+
+  .seven {
+    top: 430px;
+  }
+
+  .six {
+    background-size: auto 500px;
+    top: 570px;
+  }
+
+  .five {
+    background-size: auto 700px;
+    top: 330px;
+  }
+
+  .four {
+    background-size: auto 700px;
+    top: 530px;
+  }
+
+  .three {
+    top: -129px;
+    background-size: auto 1600px;
+    height: 120vh;
+  }
+
+  .two {
+    top: 650px;
+    background-size: auto 900px;
+  }
+
+  .one {
+    top: 800px;
+    background-size: auto 3500px;
   }
 }
