@@ -557,6 +557,17 @@ _______          ____
     top: 330px;
   }
 
+  h6 {
+    color: var(--paletteDark);
+    position: relative;
+    top: 240px;
+    text-align: center;
+    z-index: -7;
+    text-transform: uppercase;
+    font-size: 6vmin;
+    letter-spacing: 1.5vmin;
+  }
+
   .six {
     background-size: auto 250px;
     top: 420px;

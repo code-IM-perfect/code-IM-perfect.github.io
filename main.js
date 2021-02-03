@@ -1,13 +1,14 @@
 let menuToggle = false;
-const getNavigation = document.querySelector("nav ul");
 const getHead = document.querySelector("header");
-const getTapHere = document.querySelector("#tapHere");
 const getCursor = document.querySelector(".cursor");
 let navLinks = document.querySelectorAll("nav ul li a");
 const getFooter = document.querySelector("footer");
 const getBody = document.querySelector("body");
 
 const toggleHeader = function () {
+  const getTapHere = document.querySelector("#tapHere");
+  const getNavigation = document.querySelector("nav ul");
+
   if (menuToggle === false) {
     getNavigation.classList.add("showUl");
     getTapHere.style.display = "none";
