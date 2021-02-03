@@ -155,7 +155,7 @@ footer p {
   height: 100vh;
 }
 
-img.parallax {
+.parallax {
   position: absolute;
   background-repeat: repeat-x;
   width: 100vw;
@@ -196,7 +196,7 @@ img.parallax {
 h6 {
   color: var(--paletteDark);
   position: relative;
-  top: 240px;
+  top: 150px;
   text-align: center;
   z-index: -7;
   text-transform: uppercase;
@@ -521,7 +521,7 @@ _______          ____
     height: 100vh;
   }
 
-  .parallax {
+  img.parallax {
     background-size: auto 450px;
     position: absolute;
     background-repeat: repeat-x;
