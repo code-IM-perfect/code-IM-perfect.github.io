@@ -124,7 +124,7 @@ footer {
   align-items: center;
 }
 
-h3 {
+footer h3 {
   font-size: 14vmin;
   font-weight: 800;
   text-align: center;
@@ -155,83 +155,71 @@ footer p {
   height: 100vh;
 }
 
-.parallax {
-  position: absolute;
-  background-repeat: repeat-x;
-  width: 100vw;
-  height: 1000px;
-  background-position: top;
-}
-
 .sky {
   background-image: url(res/img/sky.png);
-  z-index: -11;
+  z-index: -13;
 }
 
 .eleven {
   background-image: url(res/img/11.png);
-  z-index: -10;
+  z-index: -12;
 }
 
 .ten {
   background-image: url(res/img/10.png);
-  z-index: -9;
+  z-index: -11;
 }
 
 .nine {
   background-image: url(res/img/9.png);
-  z-index: -8;
+  z-index: -10;
 }
 
 .eight {
   background-image: url(res/img/8.png);
-  z-index: -7;
-}
-
-.seven {
-  background-image: url(res/img/7.png);
-  z-index: -6;
+  z-index: -9;
 }
 
 h6 {
   color: var(--paletteDark);
   position: relative;
-  top: 150px;
   text-align: center;
-  z-index: -7;
   text-transform: uppercase;
-  font-size: 7vmin;
-  letter-spacing: 0.5vmin;
+}
+
+.seven {
+  background-image: url(res/img/7.png);
+  z-index: -7;
 }
 
 .six {
   background-image: url(res/img/6.png);
-  z-index: -5;
+  z-index: -6;
 }
 
 .five {
   background-image: url(res/img/5.png);
-  z-index: -4;
+  z-index: -5;
 }
 
 .four {
   background-image: url(res/img/4.png);
-  z-index: -3;
+  z-index: -4;
 }
 
 .three {
   background-image: url(res/img/3.png);
-  z-index: -2;
+  z-index: -3;
 }
 
 .two {
   background-image: url(res/img/2.png);
-  z-index: -1;
+  z-index: -2;
 }
 
 .one {
   background-image: url(res/img/1.png);
-  z-index: 0;
+  z-index: -1;
 }
 
 /* 
@@ -286,35 +274,47 @@ h6 {
 
   /* Parallax for Mobile */
   .parallax {
+    position: absolute;
+    background-repeat: repeat-x;
+    width: 100vw;
+    height: 1000px;
+    background-position: top;
     background-size: auto 300px;
   }
 
   .sky {
     top: -100px;
+    height: 350px;
   }
 
   .eleven {
     top: 140px;
+    height: 200px;
   }
 
   .ten {
     top: 170px;
+    height: 200px;
   }
 
   .nine {
     top: 200px;
+    height: 200px;
   }
 
   .eight {
     top: 210px;
+    height: 500px;
   }
 
   .seven {
     top: 230px;
+    height: 500px;
   }
 
   .six {
     top: 290px;
+    height: 200px;
   }
 
   .five {
@@ -338,6 +338,15 @@ h6 {
   .one {
     top: 490px;
     background-size: auto 900px;
+  }
+
+  h6.parallax {
+    top: 150px;
+    z-index: -8;
+    font-size: 7vmin;
+    letter-spacing: 0.5vmin;
+    height: auto;
+    background: none;
   }
 
   /* Footer */
@@ -452,7 +461,8 @@ _______          ____
     pointer-events: none;
     z-index: 105;
     transition: all 0.2s ease;
-    transition-property: background, transform, transform-origin, border;
+    transition-property: background, transform, transform-origin, border,
+      opacity;
     transform-origin: 130% 130%;
   }
 
@@ -476,6 +486,14 @@ _______          ____
     transform: scale(6);
     background: var(--brandColor);
     border: var(--brandColor);
+  }
+
+  .curz-on-out {
+    transform: scale(3);
+    transform-origin: 75% 75%;
+    background: white;
+    mix-blend-mode: difference;
+    opacity: 0;
   }
 
   /* Header */
@@ -507,6 +525,7 @@ _______          ____
   ul li {
     list-style: none;
   }
+
   nav ul {
     display: flex;
   }
@@ -521,7 +540,7 @@ _______          ____
     height: 100vh;
   }
 
-  img.parallax {
+  .parallax {
     background-size: auto 450px;
     position: absolute;
     background-repeat: repeat-x;
@@ -557,7 +576,7 @@ _______          ____
     top: 330px;
   }
 
-  h6 {
+  h6.parallax {
     color: var(--paletteDark);
     position: relative;
     top: 240px;
@@ -566,6 +585,10 @@ _______          ____
     text-transform: uppercase;
     font-size: 6vmin;
     letter-spacing: 1.5vmin;
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    background: none;
   }
 
   .six {
@@ -585,7 +608,7 @@ _______          ____
 
   .three {
     top: 100px;
-    background-size: auto 760px;
+    background-size: auto 750px;
   }
 
   .two {
@@ -596,9 +619,51 @@ _______          ____
   .one {
     top: 500px;
     background-size: auto 2000px;
+    height: 1500px;
   }
 
   /* Main */
+  main {
+    margin-top: 210px;
+    display: grid;
+  }
+
+  /* About Us */
+  .about-us {
+    background: var(--paletteDark);
+    display: grid;
+    justify-items: center;
+  }
+
+  .stroke-headings {
+    display: grid;
+    place-items: center;
+  }
+
+  .stroke-headings h2 {
+    position: relative;
+    font-size: 15vh;
+    padding: 4vw;
+  }
+
+  .stroke-headings h3 {
+    font-size: 15vh;
+    position: absolute;
+    color: var(--paletteDark);
+    -webkit-text-stroke: 0.4vh var(--paletteLight);
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 4vw;
+    opacity: 0;
+  }
+
+  .about-us p {
+    color: var(--paletteLight);
+    width: 60vw;
+    text-align: center;
+    font-size: 3.5vh;
+    font-weight: 400;
+  }
 
   /* Footer */
   footer {
@@ -686,13 +751,11 @@ _______          ____
   }
 }
 
-/* 
-                   ____     ______      ______
+/*                 ____     ______      ______
 |         /\      |    \   /           |
 |        /  \     |____/  |      ___   |___
 |       /----\    |   \   |       | |  |
 |_____ /      \   |    \   \_____/  |  |______
-
 */
 @media screen and (min-width: 1960px) {
   /* Parallax */
@@ -765,5 +828,6 @@ _______          ____
   .one {
     top: 800px;
     background-size: auto 3500px;
+    height: 2000px;
   }
 }

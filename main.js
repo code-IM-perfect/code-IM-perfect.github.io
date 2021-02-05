@@ -4,6 +4,8 @@ const getCursor = document.querySelector(".cursor");
 let navLinks = document.querySelectorAll("nav ul li a");
 const getFooter = document.querySelector("footer");
 const getBody = document.querySelector("body");
+const originalText = document.querySelector(".stroke-headings h2");
+const getOutline = document.querySelector(".stroke-headings h3");
 
 const toggleHeader = function () {
   const getTapHere = document.querySelector("#tapHere");
@@ -58,6 +60,29 @@ navLinks.forEach((link) => {
     getBody.classList.remove("removeCurz");
   });
 })();
+
+//Outline
+getOutline.addEventListener("mousemove", match);
+
+originalText.addEventListener("mousemove", match);
+
+function match(e) {
+  var rect = e.target.getBoundingClientRect();
+  var x = e.clientX - rect.left;
+  var y = e.clientY - rect.top;
+  getOutline.style.clipPath =
+    "circle(6vw at " + x + "px" + " " + y + "px" + ")";
+}
+
+getOutline.addEventListener("mouseover", () => {
+  getCursor.classList.add("curz-on-out");
+  getOutline.style.opacity = "1";
+});
+
+getOutline.addEventListener("mouseleave", () => {
+  getCursor.classList.remove("curz-on-out");
+  getOutline.style.opacity = "0";
+});
 
 //Rellax
 var rellax = new Rellax(".parallax");
