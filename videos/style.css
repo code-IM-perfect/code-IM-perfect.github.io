@@ -159,7 +159,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
   margin-bottom: 10vh;
-  grid-gap: 2em 1.5em;
+  gap: 2em 1.5em;
 }
 
 .card img {
@@ -179,7 +179,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
   margin-bottom: 10vh;
-  grid-gap: 2em 1.5em;
+  gap: 2em 1.5em;
 }
 
 /* FOOTER STYLES */
@@ -537,11 +537,13 @@ _______          ____
   .popu {
     grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
     width: 100%;
+    gap: 6vh 6vw;
   }
 
   .saareVid {
     grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
     width: 100%;
+    gap: 6vh 6vw;
   }
 
   .card p {

@@ -614,6 +614,7 @@ _______          ____
   .two {
     top: 430px;
     background-size: auto 500px;
+    height: 3000px;
   }
 
   .one {
