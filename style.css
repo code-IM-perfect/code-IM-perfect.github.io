@@ -49,6 +49,9 @@ body {
 .cls-2 {
   fill: #63d487;
 }
+.cls2 {
+  fill: var(--brandColor);
+}
 .crcl {
   fill: var(--paletteLight);
 }
