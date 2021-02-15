@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 let menuToggle = false;
 const getHead = document.querySelector("header");
 const getCursor = document.querySelector(".cursor");
@@ -61,7 +63,7 @@ navLinks.forEach((link) => {
   });
 })();
 
-//Outline
+//Outline-About
 getOutline.addEventListener("mousemove", match);
 
 originalText.addEventListener("mousemove", match);
@@ -86,3 +88,191 @@ getOutline.addEventListener("mouseleave", () => {
 
 //Rellax
 var rellax = new Rellax(".parallax");
+
+// Slides
+gsap.to(".ek h2", {
+  scrollTrigger: {
+    trigger: ".ek",
+    scrub: true,
+  },
+  x: "-270vh",
+});
+
+gsap.fromTo(
+  ".scroll-wrapper",
+  {
+    background: "var(--paletteLight)",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".saath",
+      scrub: true,
+    },
+    background: "var(--paletteDark)",
+  }
+);
+
+gsap.fromTo(
+  ".scroll-wrapper",
+  {
+    background: "var(--paletteDark)",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".chay",
+      scrub: true,
+    },
+    background: "var(--paletteLight)",
+  }
+);
+
+gsap.fromTo(
+  ".cursor",
+  {
+    borderColor: "var(--paletteLight)",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".chay",
+      scrub: true,
+    },
+    borderColor: "var(--paletteDark)",
+  }
+);
+
+gsap.fromTo(
+  ".cursor",
+  {
+    borderColor: "var(--paletteDark)",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".saath",
+      scrub: true,
+    },
+    borderColor: "var(--paletteLight)",
+  }
+);
+
+gsap.fromTo(
+  ".scroll-wrapper",
+  {
+    background: "var(--brandColor)",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".do",
+      scrub: true,
+    },
+    background: "var(--paletteDark)",
+  }
+);
+
+gsap.fromTo(
+  ".do-me .write",
+  {
+    clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".do-me",
+      scrub: true,
+      start: "-250% center",
+      end: "600% center",
+    },
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+  }
+);
+
+gsap.to(".chay h2", {
+  scrollTrigger: {
+    trigger: ".chay",
+    scrub: true,
+  },
+  letterSpacing: "4vw",
+});
+
+gsap.fromTo(
+  ".teen-me .manip",
+  {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".teen-me",
+      scrub: true,
+      start: "-250% center",
+      end: "600% center",
+    },
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+  }
+);
+
+gsap.fromTo(
+  ".chaar-me .edit",
+  {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".chaar-me",
+      scrub: true,
+      start: "-250% center",
+      end: "600% center",
+    },
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+  }
+);
+
+gsap.fromTo(
+  ".paach .every",
+  {
+    color: gsap.getProperty("html", "--paletteLight"),
+  },
+  {
+    scrollTrigger: {
+      trigger: ".paach h3",
+      scrub: true,
+      start: "-250% center",
+      end: "100% center",
+    },
+    color: gsap.getProperty("html", "--brandColor"),
+  }
+);
+
+gsap.fromTo(
+  ".saath .perfection",
+  {
+    color: gsap.getProperty("html", "--paletteLight"),
+  },
+  {
+    scrollTrigger: {
+      trigger: ".saath",
+      scrub: true,
+      start: "top center",
+      end: "bottom center",
+    },
+    color: gsap.getProperty("html", "--brandColor"),
+  }
+);
+
+gsap.fromTo(
+  ".aath h3",
+  {
+    letterSpacing: "4vw",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".aath",
+      scrub: true,
+    },
+    letterSpacing: "0",
+  }
+);
+
+ScrollLottie({
+  target: "#scroll-intro",
+  path: "res/script/data.json",
+  duration: 4,
+  speed: "slow",
+});
