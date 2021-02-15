@@ -8,6 +8,8 @@ const getFooter = document.querySelector("footer");
 const getBody = document.querySelector("body");
 const originalText = document.querySelector(".stroke-headings h2");
 const getOutline = document.querySelector(".stroke-headings h3");
+const slideOriginalText = document.querySelector(".chay-main");
+const slideOutline = document.querySelector(".chay-me");
 
 const toggleHeader = function () {
   const getTapHere = document.querySelector("#tapHere");
@@ -46,6 +48,7 @@ navLinks.forEach((link) => {
 (function () {
   getHead.addEventListener("mouseover", () => {
     getCursor.classList.add("curzOnHeader");
+    getCursor.style.borderColor = "#269e97";
   });
   getHead.addEventListener("mouseleave", () => {
     getCursor.classList.remove("curzOnHeader");
@@ -84,6 +87,29 @@ getOutline.addEventListener("mouseover", () => {
 getOutline.addEventListener("mouseleave", () => {
   getCursor.classList.remove("curz-on-out");
   getOutline.style.opacity = "0";
+});
+
+//Outline-Slide
+slideOutline.addEventListener("mousemove", imp);
+
+slideOriginalText.addEventListener("mousemove", imp);
+
+function imp(e) {
+  var rect = e.target.getBoundingClientRect();
+  var x = e.clientX - rect.left;
+  var y = e.clientY - rect.top;
+  slideOutline.style.clipPath =
+    "circle(6vw at " + x + "px" + " " + y + "px" + ")";
+}
+
+slideOutline.addEventListener("mouseover", () => {
+  getCursor.classList.add("curz-on-out");
+  slideOutline.style.opacity = "1";
+});
+
+slideOutline.addEventListener("mouseleave", () => {
+  getCursor.classList.remove("curz-on-out");
+  slideOutline.style.opacity = "0";
 });
 
 //Rellax
@@ -129,20 +155,6 @@ gsap.fromTo(
 gsap.fromTo(
   ".cursor",
   {
-    borderColor: "var(--paletteLight)",
-  },
-  {
-    scrollTrigger: {
-      trigger: ".chay",
-      scrub: true,
-    },
-    borderColor: "var(--paletteDark)",
-  }
-);
-
-gsap.fromTo(
-  ".cursor",
-  {
     borderColor: "var(--paletteDark)",
   },
   {
@@ -151,6 +163,20 @@ gsap.fromTo(
       scrub: true,
     },
     borderColor: "var(--paletteLight)",
+  }
+);
+
+gsap.fromTo(
+  ".cursor",
+  {
+    borderColor: "var(--paletteLight)",
+  },
+  {
+    scrollTrigger: {
+      trigger: ".chay",
+      scrub: true,
+    },
+    borderColor: "var(--paletteDark)",
   }
 );
 
@@ -177,8 +203,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".do-me",
       scrub: true,
-      start: "-250% center",
-      end: "600% center",
+      start: "-350% center",
+      end: "1000% center",
     },
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
   }
@@ -201,8 +227,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".teen-me",
       scrub: true,
-      start: "-250% center",
-      end: "600% center",
+      start: "-350% center",
+      end: "1000% center",
     },
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
   }
@@ -217,8 +243,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".chaar-me",
       scrub: true,
-      start: "-250% center",
-      end: "600% center",
+      start: "-350% center",
+      end: "1000% center",
     },
     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
   }
@@ -233,8 +259,8 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".paach h3",
       scrub: true,
-      start: "-250% center",
-      end: "100% center",
+      start: "-150% center",
+      end: "200% center",
     },
     color: gsap.getProperty("html", "--brandColor"),
   }

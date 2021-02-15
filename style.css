@@ -833,11 +833,13 @@ __/  |__  |  |__/  |__  __/
     position: absolute;
     -webkit-text-stroke: var(--paletteDark) 0.35vmin;
     color: var(--paletteLight);
+    opacity: 0;
   }
 
   .chay h2 {
     color: var(--paletteDark);
     -webkit-text-stroke: var(--paletteDark) 0.35vmin;
+    padding: 4vw;
   }
 
   /* Seventh */
