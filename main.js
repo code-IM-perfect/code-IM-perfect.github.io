@@ -12,6 +12,7 @@ const originalText = document.querySelector(".stroke-headings h2");
 const getOutline = document.querySelector(".stroke-headings h3");
 const slideOriginalText = document.querySelector(".chay-main");
 const slideOutline = document.querySelector(".chay-me");
+const slideHeadings = document.querySelectorAll(".scroll-wrapper h3");
 
 const toggleHeader = function () {
   const getTapHere = document.querySelector("#tapHere");
@@ -44,6 +45,15 @@ navLinks.forEach((link) => {
   });
   link.addEventListener("mouseleave", () => {
     getCursor.classList.remove("curzOnLink");
+  });
+});
+
+slideHeadings.forEach((heading) => {
+  heading.addEventListener("mouseover", () => {
+    getCursor.classList.add("curzOnHeading");
+  });
+  heading.addEventListener("mouseleave", () => {
+    getCursor.classList.remove("curzOnHeading");
   });
 });
 

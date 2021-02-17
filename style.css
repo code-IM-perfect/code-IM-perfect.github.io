@@ -499,6 +499,15 @@ _______          ____
     opacity: 0;
   }
 
+  .curzOnHeading {
+    fill: var(--paletteLight);
+    mix-blend-mode: difference;
+    transform: scale(3);
+    background: var(--paletteLight);
+    border-color: var(--paletteLight);
+    transform-origin: 75% 75%;
+  }
+
   /* Header */
   #tapHere {
     display: none;
