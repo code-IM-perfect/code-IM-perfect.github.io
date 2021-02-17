@@ -1,5 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.set(".cursor", { borderColor: "--paletteLight" });
+
 let menuToggle = false;
 const getHead = document.querySelector("header");
 const getCursor = document.querySelector(".cursor");
@@ -52,6 +54,7 @@ navLinks.forEach((link) => {
   });
   getHead.addEventListener("mouseleave", () => {
     getCursor.classList.remove("curzOnHeader");
+    getCursor.style.borderColor = "var(--paletteLight)";
   });
 })();
 
@@ -202,7 +205,7 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".do-me",
-      scrub: true,
+      scrub: 0.5,
       start: "-350% center",
       end: "1000% center",
     },
@@ -213,7 +216,7 @@ gsap.fromTo(
 gsap.to(".chay h2", {
   scrollTrigger: {
     trigger: ".chay",
-    scrub: true,
+    scrub: 0.5,
   },
   letterSpacing: "4vw",
 });
@@ -226,7 +229,7 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".teen-me",
-      scrub: true,
+      scrub: 0.5,
       start: "-350% center",
       end: "1000% center",
     },
@@ -242,7 +245,7 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".chaar-me",
-      scrub: true,
+      scrub: 0.5,
       start: "-350% center",
       end: "1000% center",
     },
@@ -258,7 +261,7 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".paach h3",
-      scrub: true,
+      scrub: 0.5,
       start: "-150% center",
       end: "200% center",
     },
@@ -274,7 +277,7 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".saath",
-      scrub: true,
+      scrub: 0.5,
       start: "top center",
       end: "bottom center",
     },
@@ -290,7 +293,7 @@ gsap.fromTo(
   {
     scrollTrigger: {
       trigger: ".aath",
-      scrub: true,
+      scrub: 0.5,
     },
     letterSpacing: "0",
   }
@@ -301,4 +304,30 @@ ScrollLottie({
   path: "res/script/data.json",
   duration: 4,
   speed: "slow",
+});
+
+//Tiles Inertia
+gsap.set(".card", {
+  transformOrigin: "center",
+  force3D: true,
+});
+
+let proxy = { skew: 0 },
+  skewSetter = gsap.quickSetter(".card", "skewY", "deg"), // fast
+  clamp = gsap.utils.clamp(-15, 15); // don't let the skew go beyond 20 degrees.
+
+ScrollTrigger.create({
+  onUpdate: (self) => {
+    let skew = clamp(self.getVelocity() / 300);
+    if (Math.abs(skew) > Math.abs(proxy.skew)) {
+      proxy.skew = skew;
+      gsap.to(proxy, {
+        skew: 0,
+        duration: 0.8,
+        ease: "power3",
+        overwrite: true,
+        onUpdate: () => skewSetter(proxy.skew),
+      });
+    }
+  },
 });

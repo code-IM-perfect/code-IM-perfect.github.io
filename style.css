@@ -733,6 +733,7 @@ __/  |__  |  |__/  |__  __/
   /* Second */
 
   .do {
+    position: relative;
     display: grid;
     place-items: center;
     width: 100vw;
@@ -766,6 +767,7 @@ __/  |__  |  |__/  |__  __/
     place-items: center;
     width: 100vw;
     height: 100vh;
+    position: relative;
   }
 
   .teen-main {
@@ -795,6 +797,7 @@ __/  |__  |  |__/  |__  __/
     place-items: center;
     width: 100vw;
     height: 100vh;
+    position: relative;
   }
 
   .chaar-me .edit {
@@ -819,6 +822,7 @@ __/  |__  |  |__/  |__  __/
     place-items: center;
     width: 100vw;
     height: 100vh;
+    position: relative;
   }
 
   /* Sixth */
@@ -827,6 +831,7 @@ __/  |__  |  |__/  |__  __/
     place-items: center;
     width: 100vw;
     height: 100vh;
+    position: relative;
   }
 
   .chay h2.chay-me {
@@ -848,6 +853,7 @@ __/  |__  |  |__/  |__  __/
     place-items: center;
     width: 100vw;
     height: 100vh;
+    position: relative;
   }
 
   /* Eighth */
@@ -856,6 +862,7 @@ __/  |__  |  |__/  |__  __/
     place-items: center;
     width: 100vw;
     height: 100vh;
+    position: relative;
   }
 
   .aath h3 {
@@ -869,7 +876,46 @@ __/  |__  |  |__/  |__  __/
     height: 100vh;
   }
 
-  /* Footer */
+  /* Channel Intro */
+  .channel-intro iframe {
+    width: 100vw;
+    height: calc(900vw / 16);
+  }
+
+  /* Videos */
+  .showcase-videos {
+    display: grid;
+    justify-items: center;
+  }
+
+  .showcase-videos h2 {
+    margin-top: 15vh;
+    margin-bottom: 7vh;
+    font-size: 8vh;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--paletteLight);
+  }
+
+  .saareVid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
+    width: 85vw;
+    gap: 6vh 6vw;
+  }
+
+  .card img {
+    width: 100%;
+  }
+
+  .card p {
+    text-align: center;
+    font-size: 2vh;
+  }
+
   /* Footer */
   footer {
     margin-top: 30vh;
