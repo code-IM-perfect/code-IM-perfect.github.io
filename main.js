@@ -129,12 +129,24 @@ slideOutline.addEventListener("mouseleave", () => {
 var rellax = new Rellax(".parallax");
 
 // Slides
-gsap.to(".ek h2", {
+gsap.to(".ek .main-waale", {
   scrollTrigger: {
     trigger: ".ek",
     scrub: true,
   },
   x: "-270vh",
+});
+
+gsap.set(".ek .doosre-waale", { y: "15vh" });
+
+gsap.set(".ek .baad-waale", { y: "-15vh" });
+
+gsap.from(".ek .doosre-waale, .ek .baad-waale", {
+  scrollTrigger: {
+    trigger: ".ek",
+    scrub: true,
+  },
+  x: "-290vh",
 });
 
 gsap.fromTo(
