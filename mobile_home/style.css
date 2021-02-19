@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* General Stuff */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+::selection {
+  background-color: #5cc97e;
+  color: var(--paletteDark);
+}
+
+footer h3::selection {
+  background-color: var(--paletteDark);
+  color: var(--brandColor);
+}
+
+footer h4::selection {
+  background-color: var(--paletteDark);
+  color: var(--brandColor);
+}
+
+footer p::selection {
+  background-color: var(--paletteDark);
+  color: var(--brandColor);
+}
+
+body {
+  background-color: var(--paletteDark);
+  font-family: Montserrat;
+  overflow-x: hidden;
+  color: var(--paletteLight);
+}
+
+:root {
+  --paletteDark: #0b0b0a;
+  --paletteLight: #fff;
+  --brandColor: #4da167;
+}
+
+/* SVG styling */
+.cls-1 {
+  fill: var(--paletteDark);
+}
+.cls-2 {
+  fill: #63d487;
+}
+.cls2 {
+  fill: var(--brandColor);
+}
+.crcl {
+  fill: var(--paletteLight);
+}
+.clsy-1 {
+  fill: var(--paletteDark);
+}
+.clsy-2 {
+  fill: var(--paletteLight);
+}
+.clst-2 {
+  fill: var(--paletteDark);
+}
+
+/* Header */
+nav ul {
+  display: none;
+}
+header {
+  background-color: #269e97;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  height: 15vh;
+  padding: 2vh 0;
+}
+
+.home {
+  color: #63d487;
+}
+
+/* Tap Here */
+
+#tapHere {
+  position: absolute;
+  width: 30vw;
+  right: 2vw;
+  top: 1vh;
+}
+
+/* Main */
+.main {
+  position: relative;
+}
+
+/* FOOTER STYLES */
+
+footer {
+  position: relative;
+  height: 53vh;
+  background-color: var(--brandColor);
+}
+
+#twitter {
+  width: 24vmin;
+}
+
+.logo {
+  display: none;
+}
+
+#youtube {
+  width: 23vmin;
+}
+
+.social {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  column-gap: 15vw;
+  align-items: center;
+}
+
+footer h3 {
+  font-size: 14vmin;
+  font-weight: 800;
+  text-align: center;
+  color: var(--paletteDark);
+  padding-top: 5vh;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-align: center;
+  color: var(--paletteDark);
+  margin-top: 1vh;
+}
+
+footer p {
+  color: var(--paletteDark);
+  position: absolute;
+  bottom: 1vh;
+  text-align: center;
+  width: 100%;
+  font-weight: 200;
+}
+
+/* Parallax */
+.wrap-parallax {
+  position: relative;
+  height: 100vh;
+}
+
+.sky {
+  background-image: url(/res/img/sky.png);
+  z-index: -13;
+}
+
+.eleven {
+  background-image: url(/res/img/11.png);
+  z-index: -12;
+}
+
+.ten {
+  background-image: url(/res/img/10.png);
+  z-index: -11;
+}
+
+.nine {
+  background-image: url(/res/img/9.png);
+  z-index: -10;
+}
+
+.eight {
+  background-image: url(/res/img/8.png);
+  z-index: -9;
+}
+
+h6 {
+  color: var(--paletteDark);
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.seven {
+  background-image: url(/res/img/7.png);
+  z-index: -7;
+}
+
+.six {
+  background-image: url(/res/img/6.png);
+  z-index: -6;
+}
+
+.five {
+  background-image: url(/res/img/5.png);
+  z-index: -5;
+}
+
+.four {
+  background-image: url(/res/img/4.png);
+  z-index: -4;
+}
+
+.three {
+  background-image: url(/res/img/3.png);
+  z-index: -3;
+}
+
+.two {
+  background-image: url(/res/img/2.png);
+  z-index: -2;
+}
+
+.one {
+  background-image: url(/res/img/1.png);
+  z-index: -1;
+}
+
+/* 
+  _____            _____           ______
+  |    \  |    |  /     \  |\   | |
+  |____/  |____| |       | | \  | |___
+  |       |    | |       | |  \ | |
+  |       |    |  \_____/  |   \| |______
+  
+*/
+
+@media screen and (max-width: 767px) {
+  .cursor {
+    display: none;
+  }
+
+  .sir {
+    height: 100vh;
+  }
+
+  nav .showUl {
+    display: block;
+    margin-top: 3vh;
+    list-style: none;
+    text-align: center;
+    font-size: 3em;
+    height: 50vh;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: var(--paletteDark);
+  }
+
+  nav ul li {
+    margin-bottom: 10vh;
+  }
+
+  .wrapHead {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  .button {
+    align-self: center;
+  }
+
+  #youtubeLap {
+    display: none;
+  }
+
+  /* Parallax for Mobile */
+  .parallax {
+    position: absolute;
+    background-repeat: repeat-x;
+    width: 100vw;
+    height: 1000px;
+    background-position: top;
+    background-size: auto 300px;
+  }
+
+  .sky {
+    top: -100px;
+    height: 350px;
+  }
+
+  .eleven {
+    top: 140px;
+    height: 200px;
+  }
+
+  .ten {
+    top: 170px;
+    height: 200px;
+  }
+
+  .nine {
+    top: 200px;
+    height: 200px;
+  }
+
+  .eight {
+    top: 210px;
+    height: 500px;
+  }
+
+  .seven {
+    top: 230px;
+    height: 500px;
+  }
+
+  .six {
+    top: 290px;
+    height: 200px;
+  }
+
+  .five {
+    top: 220px;
+    background-size: auto 250px;
+  }
+
+  .four {
+    top: 250px;
+  }
+
+  .three {
+    top: 130px;
+    background-size: auto 450px;
+  }
+
+  .two {
+    top: 390px;
+  }
+
+  .one {
+    top: 490px;
+    background-size: auto 900px;
+  }
+
+  h6.parallax {
+    top: 150px;
+    z-index: -8;
+    font-size: 7vmin;
+    letter-spacing: 0.5vmin;
+    height: auto;
+    background: none;
+  }
+
+  /* Footer */
+  footer p {
+    color: var(--paletteDark);
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translate(-51%, 0);
+    width: 100%;
+    font-weight: 200;
+    text-align: center;
+  }
+}
+
+/*
+_______          ____
+   |      /\    |    \
+   |     /__\   |_____|
+   |    /    \  |      \
+   |   /      \ |______/
+
+*/
+@media screen and (min-width: 768px) and (max-width: 1025px) {
+  .cursor {
+    display: none;
+  }
+
+  .sir {
+    height: 100vh;
+  }
+
+  nav .showUl {
+    display: block;
+    margin-top: 5vh;
+    list-style: none;
+    text-align: center;
+    height: 50vh;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: var(--paletteDark);
+    font-size: 3em;
+  }
+
+  nav ul li {
+    margin-bottom: 15vh;
+  }
+
+  .wrapHead {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+  }
+
+  /* Footer */
+  .contact h4 {
+    font-size: 5vmin;
+  }
+
+  footer {
+    height: 70vh;
+  }
+
+  #youtube {
+    width: 17vmin;
+  }
+  #twitter {
+    width: 18vmin;
+  }
+
+  footer p {
+    color: var(--paletteDark);
+    font-size: 1.2em;
+    font-weight: 300;
+    position: absolute;
+    bottom: 1vh;
+    left: 50vw;
+    transform: translateX(-50%);
+  }
+
+  #youtubeLap {
+    display: none;
+  }
+
+  /* Parallax for tab */
+  .parallax {
+    display: none;
+  }
+}
