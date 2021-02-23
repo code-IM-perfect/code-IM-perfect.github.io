@@ -1,17 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.set(".cursor", { borderColor: "--paletteLight" });
-
 let menuToggle = false;
 const getHead = document.querySelector("header");
 let navLinks = document.querySelectorAll("nav ul li a");
-const getFooter = document.querySelector("footer");
-const getBody = document.querySelector("body");
-const originalText = document.querySelector(".stroke-headings h2");
-const getOutline = document.querySelector(".stroke-headings h3");
-const slideOriginalText = document.querySelector(".chay-main");
-const slideOutline = document.querySelector(".chay-me");
-const slideHeadings = document.querySelectorAll(".scroll-wrapper h3");
 
 const toggleHeader = function () {
   const getTapHere = document.querySelector("#tapHere");
@@ -80,34 +71,6 @@ gsap.fromTo(
       scrub: true,
     },
     background: "var(--paletteLight)",
-  }
-);
-
-gsap.fromTo(
-  ".cursor",
-  {
-    borderColor: "var(--paletteDark)",
-  },
-  {
-    scrollTrigger: {
-      trigger: ".saath",
-      scrub: true,
-    },
-    borderColor: "var(--paletteLight)",
-  }
-);
-
-gsap.fromTo(
-  ".cursor",
-  {
-    borderColor: "var(--paletteLight)",
-  },
-  {
-    scrollTrigger: {
-      trigger: ".chay",
-      scrub: true,
-    },
-    borderColor: "var(--paletteDark)",
   }
 );
 

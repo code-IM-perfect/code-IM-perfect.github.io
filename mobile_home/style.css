@@ -99,6 +99,10 @@ header {
   position: relative;
 }
 
+.showcase-videos {
+  background: var(--paletteDark);
+}
+
 /* FOOTER STYLES */
 
 footer {
@@ -234,136 +238,126 @@ h6 {
   
 */
 
-@media screen and (max-width: 767px) {
-  .cursor {
-    display: none;
-  }
+.sir {
+  height: 100vh;
+}
 
-  .sir {
-    height: 100vh;
-  }
+nav .showUl {
+  display: block;
+  margin-top: 3vh;
+  list-style: none;
+  text-align: center;
+  font-size: 3em;
+  height: 50vh;
+}
 
-  nav .showUl {
-    display: block;
-    margin-top: 3vh;
-    list-style: none;
-    text-align: center;
-    font-size: 3em;
-    height: 50vh;
-  }
+nav ul li a {
+  text-decoration: none;
+  color: var(--paletteDark);
+}
 
-  nav ul li a {
-    text-decoration: none;
-    color: var(--paletteDark);
-  }
+nav ul li {
+  margin-bottom: 10vh;
+}
 
-  nav ul li {
-    margin-bottom: 10vh;
-  }
+.wrapHead {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
 
-  .wrapHead {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-  }
+.button {
+  align-self: center;
+}
 
-  .button {
-    align-self: center;
-  }
+/* Parallax for Mobile */
+.parallax {
+  position: absolute;
+  background-repeat: repeat-x;
+  width: 100vw;
+  height: 1000px;
+  background-position: top;
+  background-size: auto 300px;
+}
 
-  #youtubeLap {
-    display: none;
-  }
+.sky {
+  top: -100px;
+  height: 350px;
+}
 
-  /* Parallax for Mobile */
-  .parallax {
-    position: absolute;
-    background-repeat: repeat-x;
-    width: 100vw;
-    height: 1000px;
-    background-position: top;
-    background-size: auto 300px;
-  }
+.eleven {
+  top: 140px;
+  height: 200px;
+}
 
-  .sky {
-    top: -100px;
-    height: 350px;
-  }
+.ten {
+  top: 170px;
+  height: 200px;
+}
 
-  .eleven {
-    top: 140px;
-    height: 200px;
-  }
+.nine {
+  top: 200px;
+  height: 200px;
+}
 
-  .ten {
-    top: 170px;
-    height: 200px;
-  }
+.eight {
+  top: 210px;
+  height: 500px;
+}
 
-  .nine {
-    top: 200px;
-    height: 200px;
-  }
+.seven {
+  top: 230px;
+  height: 500px;
+}
 
-  .eight {
-    top: 210px;
-    height: 500px;
-  }
+.six {
+  top: 290px;
+  height: 200px;
+}
 
-  .seven {
-    top: 230px;
-    height: 500px;
-  }
+.five {
+  top: 220px;
+  background-size: auto 250px;
+}
 
-  .six {
-    top: 290px;
-    height: 200px;
-  }
+.four {
+  top: 250px;
+}
 
-  .five {
-    top: 220px;
-    background-size: auto 250px;
-  }
+.three {
+  top: 130px;
+  background-size: auto 450px;
+}
 
-  .four {
-    top: 250px;
-  }
+.two {
+  top: 390px;
+}
 
-  .three {
-    top: 130px;
-    background-size: auto 450px;
-  }
+.one {
+  top: 490px;
+  background-size: auto 900px;
+}
 
-  .two {
-    top: 390px;
-  }
+h6.parallax {
+  top: 150px;
+  z-index: -8;
+  font-size: 7vmin;
+  letter-spacing: 0.5vmin;
+  height: auto;
+  background: none;
+}
 
-  .one {
-    top: 490px;
-    background-size: auto 900px;
-  }
-
-  h6.parallax {
-    top: 150px;
-    z-index: -8;
-    font-size: 7vmin;
-    letter-spacing: 0.5vmin;
-    height: auto;
-    background: none;
-  }
-
-  /* Footer */
-  footer p {
-    color: var(--paletteDark);
-    font-size: 0.9em;
-    position: absolute;
-    bottom: 1vh;
-    left: 50%;
-    transform: translate(-51%, 0);
-    width: 100%;
-    font-weight: 200;
-    text-align: center;
-  }
+/* Footer */
+footer p {
+  color: var(--paletteDark);
+  font-size: 0.9em;
+  position: absolute;
+  bottom: 1vh;
+  left: 50%;
+  transform: translate(-51%, 0);
+  width: 100%;
+  font-weight: 200;
+  text-align: center;
 }
 
 /*
@@ -375,10 +369,6 @@ _______          ____
 
 */
 @media screen and (min-width: 768px) and (max-width: 1025px) {
-  .cursor {
-    display: none;
-  }
-
   .sir {
     height: 100vh;
   }
@@ -432,13 +422,312 @@ _______          ____
     left: 50vw;
     transform: translateX(-50%);
   }
+}
 
-  #youtubeLap {
-    display: none;
-  }
+/*
+ ______     _______
+|      \   /
+|______/  |
+|         |
+|          \_______
 
-  /* Parallax for tab */
-  .parallax {
-    display: none;
-  }
+*/
+/* Main */
+main {
+  margin-top: 210px;
+  display: grid;
+}
+
+/* About Us */
+.about-us {
+  background: var(--paletteDark);
+  display: grid;
+  justify-items: center;
+}
+
+.stroke-headings {
+  display: grid;
+  place-items: center;
+}
+
+.stroke-headings h2 {
+  position: relative;
+  font-size: 15vh;
+  padding: 4vw;
+}
+
+.stroke-headings h3 {
+  font-size: 15vh;
+  position: absolute;
+  color: var(--paletteDark);
+  -webkit-text-stroke: 0.4vh var(--paletteLight);
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 4vw;
+  opacity: 0;
+}
+
+.about-us p {
+  color: var(--paletteLight);
+  width: 60vw;
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: 400;
+}
+
+/*
+ __           __    __   __
+/_   |    |  |  \  |_   /_
+__/  |__  |  |__/  |__  __/
+
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: montserrat;
+}
+
+.divide {
+  height: 50vh;
+}
+
+.divide1 {
+  height: 50vh;
+  background: var(--paletteDark);
+}
+
+.scroll-wrapper h2 {
+  font-size: 15vmin;
+  color: var(--paletteDark);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.scroll-wrapper h3 {
+  font-size: 10vmin;
+  color: var(--paletteLight);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.scroll-wrapper {
+  background: var(--brandColor);
+  transition: all 0.2s ease;
+}
+
+/* First */
+
+.ek {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ek h2 {
+  white-space: nowrap;
+}
+
+.side-waale {
+  color: #383838;
+  opacity: 0.6;
+}
+
+.ek .doosre-waale {
+  color: #383838;
+  opacity: 0.6;
+}
+
+.ek .baad-waale {
+  color: #383838;
+  opacity: 0.6;
+}
+
+/* Second */
+
+.do {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.do-main {
+  position: relative;
+}
+
+.do-main .write {
+  color: var(--brandColor);
+  -webkit-text-stroke: var(--brandColor) 0.35vmin;
+}
+
+.do-me {
+  visibility: hidden;
+  position: absolute;
+}
+
+.do-me .write {
+  -webkit-text-stroke: var(--brandColor) 0.35vmin;
+  color: var(--paletteDark);
+  visibility: visible;
+}
+
+/* Third */
+
+.teen {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.teen-main {
+  position: relative;
+}
+
+.teen-main .manip {
+  -webkit-text-stroke: var(--brandColor) 0.35vmin;
+  color: var(--paletteDark);
+}
+
+.teen-me .manip {
+  color: var(--brandColor);
+  -webkit-text-stroke: var(--brandColor) 0.35vmin;
+  visibility: visible;
+}
+
+.teen-me {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Fourth */
+
+.chaar {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.chaar-me .edit {
+  -webkit-text-stroke: var(--brandColor) 0.35vmin;
+  color: var(--paletteDark);
+  visibility: visible;
+}
+
+.chaar-main .edit {
+  color: var(--brandColor);
+  -webkit-text-stroke: var(--brandColor) 0.35vmin;
+}
+
+.chaar-me {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Fifth */
+.paach {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* Sixth */
+.chay {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.chay h2.chay-me {
+  position: absolute;
+  -webkit-text-stroke: var(--paletteDark) 0.35vmin;
+  color: var(--paletteLight);
+  opacity: 0;
+}
+
+.chay h2 {
+  color: var(--paletteDark);
+  -webkit-text-stroke: var(--paletteDark) 0.35vmin;
+  padding: 4vw;
+}
+
+/* Seventh */
+.saath {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* Eighth */
+.aath {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.aath h3 {
+  -webkit-text-stroke: var(--paletteLight) 0.35vmin;
+  color: var(--paletteDark);
+}
+
+/* Logo */
+#scroll-intro {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Channel Intro */
+.channel-intro iframe {
+  width: 100vw;
+  height: calc(900vw / 16);
+}
+
+/* Videos */
+.showcase-videos {
+  display: grid;
+  justify-items: center;
+}
+
+.showcase-videos h2 {
+  margin-top: 15vh;
+  margin-bottom: 7vh;
+  font-size: 8vh;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--paletteLight);
+}
+
+.saareVid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
+  width: 85vw;
+  gap: 6vh 6vw;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  text-align: center;
+  font-size: 2vh;
 }
