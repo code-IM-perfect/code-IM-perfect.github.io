@@ -102,33 +102,30 @@ nav .showUl {
 }
 
 /* Main */
-.main {
+main {
   position: relative;
-  margin-top: 210px;
+  margin-top: 110px;
   display: grid;
 }
 
 /* About Us */
 .about-us {
+  padding-top: 100px;
   background: var(--paletteDark);
   display: grid;
   justify-items: center;
 }
 
-.stroke-headings {
-  display: grid;
-  place-items: center;
-}
-
-.stroke-headings h2 {
+.about-us h2 {
+  text-align: center;
   position: relative;
-  font-size: 15vh;
+  font-size: 4em;
   padding: 4vw;
 }
 
 .about-us p {
   color: var(--paletteLight);
-  width: 60vw;
+  width: 80vw;
   text-align: center;
   font-size: 3.5vh;
   font-weight: 400;
