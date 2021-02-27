@@ -31,19 +31,31 @@ gsap.to(".ek .main-waale", {
     trigger: ".ek",
     scrub: true,
   },
-  x: "-270vh",
+  x: "-330vw",
 });
 
-gsap.set(".ek .doosre-waale", { y: "15vh" });
+gsap.set(".ek .uupar-waale", { y: "60vh" });
 
-gsap.set(".ek .baad-waale", { y: "-15vh" });
+gsap.set(".ek .doosre-waale", { y: "30vh" });
+
+gsap.set(".ek .baad-waale", { y: "-30vh" });
+
+gsap.set(".ek .neeche-waale", { y: "-60vh" });
 
 gsap.from(".ek .doosre-waale, .ek .baad-waale", {
   scrollTrigger: {
     trigger: ".ek",
     scrub: true,
   },
-  x: "-290vh",
+  x: "-330vw",
+});
+
+gsap.to(".ek .uupar-waale, .ek .neeche-waale", {
+  scrollTrigger: {
+    trigger: ".ek",
+    scrub: true,
+  },
+  x: "-430vw",
 });
 
 gsap.fromTo(
@@ -190,14 +202,15 @@ gsap.fromTo(
   }
 );
 
+// Lottie
 ScrollLottie({
   target: "#scroll-intro",
-  path: "/res/script/data.json",
+  path: "/res/script/mobile.json",
   duration: 4,
   speed: "slow",
 });
 
-//Tiles Inertia
+// Tiles Inertia
 gsap.set(".card", {
   transformOrigin: "center",
   force3D: true,

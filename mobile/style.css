@@ -104,13 +104,12 @@ nav .showUl {
 /* Main */
 main {
   position: relative;
-  margin-top: 110px;
   display: grid;
 }
 
 /* About Us */
 .about-us {
-  padding-top: 100px;
+  padding-top: 500px;
   background: var(--paletteDark);
   display: grid;
   justify-items: center;
@@ -127,7 +126,7 @@ main {
   color: var(--paletteLight);
   width: 80vw;
   text-align: center;
-  font-size: 3.5vh;
+  font-size: 1.5em;
   font-weight: 400;
 }
 
@@ -251,14 +250,6 @@ h6.parallax {
 __/  |__  |  |__/  |__  __/
 
 */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: montserrat;
-}
 
 .divide {
   height: 50vh;
@@ -269,6 +260,10 @@ __/  |__  |  |__/  |__  __/
   background: var(--paletteDark);
 }
 
+.divide5 {
+  height: 70vh;
+}
+
 .scroll-wrapper h2 {
   font-size: 15vmin;
   color: var(--paletteDark);
@@ -277,7 +272,7 @@ __/  |__  |  |__/  |__  __/
 }
 
 .scroll-wrapper h3 {
-  font-size: 10vmin;
+  font-size: 2.5em;
   color: var(--paletteLight);
   user-select: none;
   -webkit-user-select: none;
@@ -286,6 +281,7 @@ __/  |__  |  |__/  |__  __/
 .scroll-wrapper {
   background: var(--brandColor);
   transition: all 0.2s ease;
+  text-align: center;
 }
 
 /* First */
@@ -302,17 +298,11 @@ __/  |__  |  |__/  |__  __/
   white-space: nowrap;
 }
 
+.ek .doosre-waale,
+.ek .baad-waale,
+.ek .uupar-waale,
+.ek .neeche-waale,
 .side-waale {
-  color: #383838;
-  opacity: 0.6;
-}
-
-.ek .doosre-waale {
-  color: #383838;
-  opacity: 0.6;
-}
-
-.ek .baad-waale {
   color: #383838;
   opacity: 0.6;
 }
@@ -329,6 +319,11 @@ __/  |__  |  |__/  |__  __/
 
 .do-main {
   position: relative;
+}
+
+.write {
+  font-size: 1.5em;
+  margin-top: 10em;
 }
 
 .do-main .write {
@@ -359,6 +354,11 @@ __/  |__  |  |__/  |__  __/
 
 .teen-main {
   position: relative;
+}
+
+.manip {
+  font-size: 1.05em;
+  margin-top: 5em;
 }
 
 .teen-main .manip {
@@ -403,6 +403,11 @@ __/  |__  |  |__/  |__  __/
   visibility: hidden;
 }
 
+.edit {
+  font-size: 1.5em;
+  margin-top: 10em;
+}
+
 /* Fifth */
 .paach {
   display: grid;
@@ -419,19 +424,13 @@ __/  |__  |  |__/  |__  __/
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
-.chay h2.chay-me {
+h2.chay-me {
   position: absolute;
-  -webkit-text-stroke: var(--paletteDark) 0.35vmin;
+  -webkit-text-stroke: var(--paletteDark) 0.035em;
   color: var(--paletteLight);
-  opacity: 0;
-}
-
-.chay h2 {
-  color: var(--paletteDark);
-  -webkit-text-stroke: var(--paletteDark) 0.35vmin;
-  padding: 4vw;
 }
 
 /* Seventh */
@@ -441,6 +440,11 @@ __/  |__  |  |__/  |__  __/
   width: 100vw;
   height: 100vh;
   position: relative;
+}
+
+.saath h3 {
+  width: 95%;
+  font-size: 3em;
 }
 
 /* Eighth */
@@ -455,6 +459,7 @@ __/  |__  |  |__/  |__  __/
 .aath h3 {
   -webkit-text-stroke: var(--paletteLight) 0.35vmin;
   color: var(--paletteDark);
+  font-size: 3.5em;
 }
 
 /* Logo */
@@ -462,15 +467,6 @@ __/  |__  |  |__/  |__  __/
   width: 100vw;
   height: 100vh;
 }
-
-/*
- ______     _______
-|      \   /
-|______/  |
-|         |
-|          \_______
-
-*/
 
 /* Channel Intro */
 .channel-intro iframe {
@@ -501,6 +497,7 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(40vh, 1fr));
   width: 85vw;
   gap: 6vh 6vw;
+  padding-bottom: 15vh;
 }
 
 .card img {
@@ -573,21 +570,11 @@ _______          ____
 
 */
 @media screen and (min-width: 768px) and (max-width: 1025px) {
-  .sir {
-    height: 100vh;
-  }
-
   nav .showUl {
-    display: block;
     margin-top: 5vh;
-    list-style: none;
-    text-align: center;
-    height: 50vh;
   }
 
   nav ul li a {
-    text-decoration: none;
-    color: var(--paletteDark);
     font-size: 3em;
   }
 
@@ -595,10 +582,18 @@ _______          ____
     margin-bottom: 15vh;
   }
 
-  .wrapHead {
-    display: flex;
-    align-content: center;
-    flex-direction: column;
+  /* Parallax */
+  h6.parallax {
+    font-size: 2em;
+  }
+
+  /* About Us */
+  .about-us {
+    padding-top: 800px;
+    margin-top: -200px;
+    background: var(--paletteDark);
+    display: grid;
+    justify-items: center;
   }
 
   /* Footer */
