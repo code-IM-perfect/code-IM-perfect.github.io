@@ -117,9 +117,7 @@ main {
 
 .about-us h2 {
   text-align: center;
-  position: relative;
   font-size: 4em;
-  padding: 4vw;
 }
 
 .about-us p {
@@ -265,7 +263,7 @@ __/  |__  |  |__/  |__  __/
 }
 
 .scroll-wrapper h2 {
-  font-size: 15vmin;
+  font-size: 3.9em;
   color: var(--paletteDark);
   user-select: none;
   -webkit-user-select: none;
@@ -292,16 +290,22 @@ __/  |__  |  |__/  |__  __/
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .ek h2 {
   white-space: nowrap;
 }
 
-.ek .doosre-waale,
-.ek .baad-waale,
-.ek .uupar-waale,
-.ek .neeche-waale,
+.waale {
+  position: absolute;
+  width: 100vw;
+}
+
+.ek .doosre,
+.ek .baad,
+.ek .uupar,
+.ek .neeche,
 .side-waale {
   color: #383838;
   opacity: 0.6;
@@ -323,7 +327,6 @@ __/  |__  |  |__/  |__  __/
 
 .write {
   font-size: 1.5em;
-  margin-top: 10em;
 }
 
 .do-main .write {
@@ -358,7 +361,6 @@ __/  |__  |  |__/  |__  __/
 
 .manip {
   font-size: 1.05em;
-  margin-top: 5em;
 }
 
 .teen-main .manip {
@@ -405,7 +407,6 @@ __/  |__  |  |__/  |__  __/
 
 .edit {
   font-size: 1.5em;
-  margin-top: 10em;
 }
 
 /* Fifth */
@@ -454,12 +455,15 @@ h2.chay-me {
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .aath h3 {
+  position: absolute;
   -webkit-text-stroke: var(--paletteLight) 0.35vmin;
   color: var(--paletteDark);
   font-size: 3.5em;
+  white-space: nowrap;
 }
 
 /* Logo */
@@ -569,7 +573,7 @@ _______          ____
    |   /      \ |______/
 
 */
-@media screen and (min-width: 768px) and (max-width: 1025px) {
+@media screen and (min-width: 768px) {
   nav .showUl {
     margin-top: 5vh;
   }
@@ -589,11 +593,49 @@ _______          ____
 
   /* About Us */
   .about-us {
-    padding-top: 800px;
+    padding-top: 500px;
     margin-top: -200px;
+    padding-bottom: 10vh;
     background: var(--paletteDark);
     display: grid;
     justify-items: center;
+  }
+
+  .about-us h2 {
+    font-size: 5.5em;
+  }
+
+  .about-us p {
+    margin-top: 1em;
+    width: 83vw;
+    font-size: 2em;
+    font-weight: 380;
+  }
+
+  .scroll-wrapper h2 {
+    font-size: 3.9em;
+  }
+
+  .scroll-wrapper h3 {
+    font-size: 3.6em;
+  }
+
+  .write {
+    font-size: 1.5em;
+    transform: translateY(21%);
+    display: block;
+  }
+
+  .manip {
+    font-size: 1.3em;
+    display: block;
+    transform: translateY(21%);
+  }
+
+  .edit {
+    font-size: 1.6em;
+    display: block;
+    transform: translateY(20%);
   }
 
   /* Footer */

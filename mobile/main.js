@@ -26,37 +26,78 @@ const toggleHeader = function () {
 var rellax = new Rellax(".parallax");
 
 // Slides
-gsap.to(".ek .main-waale", {
-  scrollTrigger: {
-    trigger: ".ek",
-    scrub: true,
-  },
-  x: "-330vw",
-});
+gsap.set(".ek .uupar", { y: "2em" });
+gsap.set(".ek .doosre", { y: "1em" });
+gsap.set(".ek .baad", { y: "-1em" });
+gsap.set(".ek .neeche", { y: "-2em" });
 
-gsap.set(".ek .uupar-waale", { y: "60vh" });
+if (screen.width >= 768) {
+  gsap.fromTo(
+    ".ek .main-waale",
+    {
+      x: "-80vw",
+    },
+    {
+      scrollTrigger: {
+        trigger: ".ek",
+        scrub: true,
+      },
+      x: "-250vw",
+    }
+  );
 
-gsap.set(".ek .doosre-waale", { y: "30vh" });
+  gsap.fromTo(
+    ".ek .doosre, .ek .baad",
+    {
+      x: "-350vw",
+    },
+    {
+      scrollTrigger: {
+        trigger: ".ek",
+        scrub: true,
+      },
+      x: "0",
+    }
+  );
 
-gsap.set(".ek .baad-waale", { y: "-30vh" });
+  gsap.to(".ek .uupar, .ek .neeche", {
+    scrollTrigger: {
+      trigger: ".ek",
+      scrub: true,
+    },
+    x: "-700vw",
+  });
+} else {
+  gsap.fromTo(
+    ".ek .main-waale",
+    {
+      x: "-700vw",
+    },
+    {
+      scrollTrigger: {
+        trigger: ".ek",
+        scrub: true,
+      },
+      x: "-300vw",
+    }
+  );
 
-gsap.set(".ek .neeche-waale", { y: "-60vh" });
+  gsap.to(".ek .doosre, .ek .baad", {
+    scrollTrigger: {
+      trigger: ".ek",
+      scrub: true,
+    },
+    x: "-500vw",
+  });
 
-gsap.from(".ek .doosre-waale, .ek .baad-waale", {
-  scrollTrigger: {
-    trigger: ".ek",
-    scrub: true,
-  },
-  x: "-330vw",
-});
-
-gsap.to(".ek .uupar-waale, .ek .neeche-waale", {
-  scrollTrigger: {
-    trigger: ".ek",
-    scrub: true,
-  },
-  x: "-430vw",
-});
+  gsap.to(".ek .uupar, .ek .neeche", {
+    scrollTrigger: {
+      trigger: ".ek",
+      scrub: true,
+    },
+    x: "-430vw",
+  });
+}
 
 gsap.fromTo(
   ".scroll-wrapper",
@@ -120,8 +161,10 @@ gsap.to(".chay h2", {
   scrollTrigger: {
     trigger: ".chay",
     scrub: 0.5,
+    start: "top center",
+    end: "bottom center",
   },
-  letterSpacing: "4vw",
+  letterSpacing: "1.5em",
 });
 
 gsap.fromTo(
@@ -191,12 +234,14 @@ gsap.fromTo(
 gsap.fromTo(
   ".aath h3",
   {
-    letterSpacing: "4vw",
+    letterSpacing: "3em",
   },
   {
     scrollTrigger: {
       trigger: ".aath",
       scrub: 0.5,
+      start: "top center",
+      end: "bottom center",
     },
     letterSpacing: "0",
   }
