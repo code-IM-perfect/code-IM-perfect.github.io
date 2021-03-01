@@ -888,9 +888,34 @@ __/  |__  |  |__/  |__  __/
   }
 
   /* Channel Intro */
+  .channel-intro {
+    background: var(--paletteLight);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    height: 90vh;
+    filter: brightness(94%);
+    transition: all 1s ease;
+  }
+
   .channel-intro iframe {
-    width: 100vw;
-    height: calc(900vw / 16);
+    width: 160vh;
+    height: 90vh;
+  }
+
+  .channel-intro img {
+    width: 128vh;
+    height: 72vh;
+    transition: all 2s ease;
+  }
+
+  .channel-intro:hover {
+    filter: brightness(100%);
+  }
+
+  .channel-intro:hover img {
+    width: 160vh;
+    height: 90vh;
   }
 
   /* Videos */

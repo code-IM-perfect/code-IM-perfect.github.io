@@ -128,6 +128,32 @@ slideOutline.addEventListener("mouseleave", () => {
 //Rellax
 var rellax = new Rellax(".parallax");
 
+//Video
+const videoContainer = document.querySelector(".channel-intro");
+const videoTrigger = document.querySelector(".channel-intro img");
+
+videoTrigger.onclick = function () {
+  videoTrigger.remove();
+
+  videoContainer.appendChild(document.createElement("iframe"));
+
+  document
+    .querySelector(".channel-intro iframe")
+    .setAttribute("src", "https://www.youtube.com/embed/cPDBKojzquE");
+  document
+    .querySelector(".channel-intro iframe")
+    .setAttribute("frameborder", "0");
+  document
+    .querySelector(".channel-intro iframe")
+    .setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    );
+  document
+    .querySelector(".channel-intro iframe")
+    .setAttribute("allowfullscreen", "");
+};
+
 // Slides
 gsap.to(".ek .main-waale", {
   scrollTrigger: {
