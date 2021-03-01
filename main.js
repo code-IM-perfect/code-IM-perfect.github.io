@@ -14,24 +14,6 @@ const slideOriginalText = document.querySelector(".chay-main");
 const slideOutline = document.querySelector(".chay-me");
 const slideHeadings = document.querySelectorAll(".scroll-wrapper h3");
 
-const toggleHeader = function () {
-  const getTapHere = document.querySelector("#tapHere");
-  const getNavigation = document.querySelector("nav ul");
-
-  if (menuToggle === false) {
-    getNavigation.classList.add("showUl");
-    getTapHere.style.display = "none";
-    getHead.classList.add("sir");
-
-    menuToggle = true;
-  } else if (menuToggle === true) {
-    getNavigation.classList.remove("showUl");
-    getHead.classList.remove("sir");
-
-    menuToggle = false;
-  }
-};
-
 window.addEventListener("mousemove", cursor);
 
 function cursor(e) {
