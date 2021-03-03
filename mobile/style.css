@@ -10,7 +10,7 @@
 }
 
 :root {
-  --paletteDark: #0a0a0a;
+  --paletteDark: #0b0b0a;
   --paletteLight: #fff;
   --brandColor: #4da167;
 }
@@ -232,7 +232,7 @@ h6.parallax {
 }
 
 .one {
-  background-image: url(/res/img/1.webp);
+  background-image: url(/res/img/1.png);
   z-index: -1;
   top: 490px;
   background-size: auto 900px;
