@@ -10,7 +10,7 @@
 }
 
 :root {
-  --paletteDark: #0b0b0a;
+  --paletteDark: #0a0a0a;
   --paletteLight: #fff;
   --brandColor: #4da167;
 }
@@ -474,6 +474,20 @@ h2.chay-me {
 
 /* Channel Intro */
 .channel-intro iframe {
+  width: 100vw;
+  height: calc(900vw / 16);
+}
+
+.channel-intro {
+  background: var(--paletteLight);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  height: calc(900vw / 16);
+  filter: brightness(92%);
+}
+
+.channel-intro img {
   width: 100vw;
   height: calc(900vw / 16);
 }

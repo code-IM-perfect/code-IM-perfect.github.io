@@ -134,6 +134,10 @@ videoTrigger.onclick = function () {
   document
     .querySelector(".channel-intro iframe")
     .setAttribute("allowfullscreen", "");
+
+  document
+    .querySelector(".channel-intro iframe")
+    .setAttribute("title", "codeIMperfect Channel Intro");
 };
 
 // Slides

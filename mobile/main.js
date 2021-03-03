@@ -25,6 +25,36 @@ const toggleHeader = function () {
 //Rellax
 var rellax = new Rellax(".parallax");
 
+//Video
+const videoContainer = document.querySelector(".channel-intro");
+const videoTrigger = document.querySelector(".channel-intro img");
+
+videoTrigger.onclick = function () {
+  videoTrigger.remove();
+
+  videoContainer.appendChild(document.createElement("iframe"));
+
+  document
+    .querySelector(".channel-intro iframe")
+    .setAttribute("src", "https://www.youtube.com/embed/cPDBKojzquE");
+  document
+    .querySelector(".channel-intro iframe")
+    .setAttribute("frameborder", "0");
+  document
+    .querySelector(".channel-intro iframe")
+    .setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    );
+  document
+    .querySelector(".channel-intro iframe")
+    .setAttribute("allowfullscreen", "");
+
+  document
+    .querySelector(".channel-intro iframe")
+    .setAttribute("title", "codeIMperfect Channel Intro");
+};
+
 // Slides
 gsap.set(".ek .uupar", { y: "2em" });
 gsap.set(".ek .doosre", { y: "1em" });
