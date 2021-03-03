@@ -7,6 +7,10 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --paletteDark: #0b0b0a;
   --paletteLight: white;
