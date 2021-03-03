@@ -144,35 +144,35 @@ main {
 }
 
 .sky {
-  background-image: url(/res/img/sky.png);
+  background-image: url(/res/img/sky.webp);
   z-index: -13;
   top: -100px;
   height: 350px;
 }
 
 .eleven {
-  background-image: url(/res/img/11.png);
+  background-image: url(/res/img/11.webp);
   z-index: -12;
   top: 140px;
   height: 200px;
 }
 
 .ten {
-  background-image: url(/res/img/10.png);
+  background-image: url(/res/img/10.webp);
   z-index: -11;
   top: 170px;
   height: 200px;
 }
 
 .nine {
-  background-image: url(/res/img/9.png);
+  background-image: url(/res/img/9.webp);
   z-index: -10;
   top: 200px;
   height: 200px;
 }
 
 .eight {
-  background-image: url(/res/img/8.png);
+  background-image: url(/res/img/8.webp);
   z-index: -9;
   top: 210px;
   height: 500px;
@@ -192,47 +192,47 @@ h6.parallax {
 }
 
 .seven {
-  background-image: url(/res/img/7.png);
+  background-image: url(/res/img/7.webp);
   z-index: -7;
   top: 230px;
   height: 500px;
 }
 
 .six {
-  background-image: url(/res/img/6.png);
+  background-image: url(/res/img/6.webp);
   z-index: -6;
   top: 290px;
   height: 200px;
 }
 
 .five {
-  background-image: url(/res/img/5.png);
+  background-image: url(/res/img/5.webp);
   z-index: -5;
   top: 220px;
   background-size: auto 250px;
 }
 
 .four {
-  background-image: url(/res/img/4.png);
+  background-image: url(/res/img/4.webp);
   z-index: -4;
   top: 250px;
 }
 
 .three {
-  background-image: url(/res/img/3.png);
+  background-image: url(/res/img/3.webp);
   z-index: -3;
   top: 130px;
   background-size: auto 450px;
 }
 
 .two {
-  background-image: url(/res/img/2.png);
+  background-image: url(/res/img/2.webp);
   z-index: -2;
   top: 390px;
 }
 
 .one {
-  background-image: url(/res/img/1.png);
+  background-image: url(/res/img/1.webp);
   z-index: -1;
   top: 490px;
   background-size: auto 900px;
