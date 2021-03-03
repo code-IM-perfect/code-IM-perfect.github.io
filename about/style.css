@@ -406,3 +406,11 @@ h4 {
     grid-area: social;
   }
 }
+
+/* Temperary */
+main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  text-align: center;
+}
