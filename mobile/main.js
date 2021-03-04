@@ -3,6 +3,7 @@ gsap.registerPlugin(ScrollTrigger);
 let menuToggle = false;
 const getHead = document.querySelector("header");
 let navLinks = document.querySelectorAll("nav ul li a");
+let paraobjects = document.querySelectorAll(".parallax");
 
 const toggleHeader = function () {
   const getTapHere = document.querySelector("#tapHere");
@@ -170,6 +171,14 @@ gsap.fromTo(
     background: "var(--paletteDark)",
   }
 );
+
+gsap.to(".parallax", {
+  scrollTrigger: {
+    trigger: ".do",
+    scrub: true,
+  },
+  display: "none",
+});
 
 gsap.fromTo(
   ".do-me .write",

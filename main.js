@@ -333,6 +333,14 @@ gsap.fromTo(
   }
 );
 
+gsap.to(".parallax", {
+  scrollTrigger: {
+    trigger: ".do",
+    scrub: true,
+  },
+  display: "none",
+});
+
 ScrollLottie({
   target: "#scroll-intro",
   path: "res/script/data.json",
