@@ -1,3 +1,3 @@
-# Website
+# codeIMperfect's Website!!!
 
-Our beta website!!
+We decided to open source our website as we believe code shouldn't be kept from anyone willing to learn from it. Also code review is always appriciated!
