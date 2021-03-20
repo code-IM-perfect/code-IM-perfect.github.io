@@ -15,7 +15,6 @@ const slideOutline = document.querySelector(".chay-me");
 const slideHeadings = document.querySelectorAll(".scroll-wrapper h3");
 
 window.addEventListener("mousemove", cursor);
-window.addEventListener("onscroll", cursor);
 
 function cursor(e) {
   getCursor.style.top = e.pageY + "px";
