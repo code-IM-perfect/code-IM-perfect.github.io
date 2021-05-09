@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: codeimperfect.ml
-Token: b7a58fb19d0457f13c72454add02df1b71bfd4a65b187dc7cb79a33b3cccadfc
